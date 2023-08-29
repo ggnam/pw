@@ -10,7 +10,9 @@
         "test:webkit": "playwright wk https://example.org",
         "generate": "playwright codegen https://example.com",
         "generate:hnt": "playwright codegen https://m.hanatour.com",
-        "start": "node src/login.js"
+        "start": "node src/login.js",
+        "gen:screenshot": "playwright screenshot https://example.com example.png",
+        "gen:pdf": "playwright pdf https://example.com example.pdf"
     },
     "dependencies": {
         "@playwright/test": "^1.37.1",
