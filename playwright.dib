@@ -19,9 +19,9 @@ flowchart LR
 
 #!markdown
 
-```shell
-### In the terminal
+## Playwright command line
 
+```shell
 # Chromium
 npx playwright cr https://example.com
 

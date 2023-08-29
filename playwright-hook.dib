@@ -5,12 +5,13 @@
 #!markdown
 
 ```mermaid
-flowchart RL
+flowchart BT
   Methods --> beforeAll
   Methods --> afterAll
   Methods --> beforeEach
   Methods --> afterEach
 ```
+---
 
 #!javascript
 
