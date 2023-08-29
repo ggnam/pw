@@ -1,0 +1,79 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"},{"aliases":[],"languageName":"javascript","name":"javascript"}]}}
+
+#!html
+
+<div id="section" style="border: 1px solid red; padding: 10px;">
+  <h1 id="login-title">로그인 테스트</h1>
+  <input id="id" type="text" name="id" placeholder="아이디">
+  <input id="password" type="password" name="pw" placeholder="비밀번호">
+  <button id="button">Login</button>
+</div>
+
+#!markdown
+
+## Page.something()
+
+- `page.goto()`
+- `page.screenshot()`
+
+```mermaid
+flowchart LR
+    Browser --> Context
+    Context --> Page
+```
+
+#!markdown
+
+```shell
+### In the terminal
+
+# Chromium
+npx playwright cr https://example.com
+
+# Webkit
+npx playwright wk https://example.com
+
+# Firefox
+npx playwright ff https://example.com
+
+npx playwright codegen https://m.hanatour.com
+```
+
+#!markdown
+
+## Screenshot 
+
+```js
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch();
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  
+  await page.goto('http://whatsmyuseragent.org/');
+  await page.screenshot({ path: `example.png` });
+  await browser.close();
+})();
+```
+
+## Recording
+```js
+const { chromium } = require('playwright');  // Or 'firefox' or 'webkit'.
+
+(async () => {
+  const browser = await chromium.launch();
+  const context = await browser.newContext({
+    recordVideo: {
+      dir: 'videos/'
+    }
+  });
+  const page = await context.newPage();
+  await page.goto('http://example.com/');
+  // Other actions...
+  await page.close();
+  await browser.close();
+})();
+```

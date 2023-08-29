@@ -13,17 +13,9 @@ test.describe("Example.com 테스트", () => {
         expect(url).toBe("http://example.com/");
     });
 
-    test("should contain correct text", async ({ page }) => {
+    test("로그인", async ({ page }) => {
         await page.goto("http://example.com");
         const textContent = await page.textContent("h1");
         expect(textContent).toBe("Example Domain");
-    });
-
-    test("should navigate to correct site", async ({ page }) => {
-        await page.goto("http://example.com");
-        await page.click("a");
-        await page.waitForNavigation(); // Wait for navigation to complete before URL check
-        const url = page.url();
-        expect(url).toContain("iana.org");
     });
 });

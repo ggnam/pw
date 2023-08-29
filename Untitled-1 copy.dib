@@ -1,0 +1,59 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"},{"aliases":[],"languageName":"javascript","name":"javascript"}]}}
+
+#!markdown
+
+```mermaid
+flowchart RL
+  Methods --> beforeAll
+  Methods --> afterAll
+  Methods --> beforeEach
+  Methods --> afterEach
+```
+
+#!javascript
+
+const { chromium } = require('playwright');
+
+describe('Login Scenario', () => {
+  let browser;
+  let page;
+
+  beforeAll(async () => {
+    browser = await chromium.launch();
+  });
+
+  afterAll(async () => {
+    await browser.close();
+  });
+
+  beforeEach(async () => {
+    page = await browser.newPage();
+    await page.goto('https://example.com/login');
+  });
+
+  afterEach(async () => {
+    await page.close();
+  });
+
+  it('should log in successfully', async () => {
+    await page.fill('input[name="username"]', 'your_username');
+    await page.fill('input[name="password"]', 'your_password');
+    await page.click('button[type="submit"]');
+
+    await page.waitForSelector('.dashboard');
+    const dashboardText = await page.textContent('.dashboard');
+    expect(dashboardText).toBe('Welcome to Your Dashboard');
+  });
+
+  it('should handle incorrect login', async () => {
+    await page.fill('input[name="username"]', 'invalid_username');
+    await page.fill('input[name="password"]', 'invalid_password');
+    await page.click('button[type="submit"]');
+
+    await page.waitForSelector('.error-message');
+    const errorMessage = await page.textContent('.error-message');
+    expect(errorMessage).toBe('Invalid username or password');
+  });
+});
