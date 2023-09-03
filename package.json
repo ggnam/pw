@@ -11,8 +11,8 @@
         "generate": "playwright codegen https://example.com",
         "generate:hnt": "playwright codegen https://m.hanatour.com",
         "start": "node src/login.js",
-        "gen:screenshot": "playwright screenshot https://example.com example.png",
-        "gen:pdf": "playwright pdf https://example.com example.pdf"
+        "gen:screenshot": "playwright screenshot https://hanatour.com hanatour.png",
+        "gen:pdf": "playwright pdf https://m.hanatour.com example.pdf"
     },
     "dependencies": {
         "@playwright/test": "^1.37.1",
