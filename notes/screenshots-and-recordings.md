@@ -16,6 +16,7 @@ const { chromium } = require("playwright");
     await page.screenshot({ path: `example.png` });
 
     // 4. 브라우저를 닫는다.
+    await page.close();
     await browser.close();
 })();
 ```
@@ -27,6 +28,7 @@ const { chromium } = require("playwright"); // Or 'firefox' or 'webkit'.
 
 (async () => {
     const browser = await chromium.launch();
+
     const context = await browser.newContext({
         recordVideo: {
             dir: "videos/",
@@ -34,7 +36,7 @@ const { chromium } = require("playwright"); // Or 'firefox' or 'webkit'.
     });
     const page = await context.newPage();
     await page.goto("http://example.com/");
-    // Other actions...
+
     await page.close();
     await browser.close();
 })();
