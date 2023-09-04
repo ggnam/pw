@@ -1,8 +1,10 @@
 {
-    "name": "pw",
+    "name": "learn-playwright",
     "version": "1.0.0",
-    "description": "",
+    "description": "Playwright",
+    "type": "module",
     "scripts": {
+        "serve": "http-server -p 8080",
         "test": "playwright test",
         "test:debug": "playwright test --headed --slowMo=50",
         "test:chromium": "playwright cr https://example.org",
@@ -14,8 +16,8 @@
         "gen:screenshot": "playwright screenshot https://hanatour.com hanatour.png",
         "gen:pdf": "playwright pdf https://m.hanatour.com example.pdf"
     },
-    "dependencies": {
+    "devDependencies": {
         "@playwright/test": "^1.37.1",
-        "playwright": "^1.37.1"
+        "http-server": "^14.1.1"
     }
 }
