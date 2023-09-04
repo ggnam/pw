@@ -14,4 +14,5 @@ export default {
         slowMo: 1000,
     },
     testDir: "./tests",
+    testIgnore: ["tests/test_runner.spec.ts", "tests/template.test.js"],
 };

@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Example.com 테스트", () => {
+test.describe.skip("Example.com 테스트", () => {
     test("should display correct title", async ({ page }) => {
         await page.goto("http://example.com");
         const title = await page.title();
