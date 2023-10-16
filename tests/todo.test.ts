@@ -19,7 +19,7 @@ test.describe("New Todo", () => {
     test("should allow me to add todo items", async ({ page }) => {
         // create a new todo locator
         const newTodo = await page.getByPlaceholder("What needs to be done?");
-await page.locator('body').click();
+        await page.locator("body").click();
         // Create 1st todo.
         await newTodo.fill(TODO_ITEMS[0]);
         await newTodo.press("Enter");
@@ -201,7 +201,7 @@ test.describe("Item", () => {
         const secondTodo = todoItems.nth(1);
         await secondTodo.dblclick();
         await expect(
-            secondTodo.getByRole("textbox", { name: "Edit" })
+            secondTodo.getByRole("textbox", { name: "Edit" }),
         ).toHaveValue(TODO_ITEMS[1]);
         await secondTodo
             .getByRole("textbox", { name: "Edit" })
@@ -231,7 +231,7 @@ test.describe("Editing", () => {
         await expect(
             todoItem.locator("label", {
                 hasText: TODO_ITEMS[1],
-            })
+            }),
         ).not.toBeVisible();
         await checkNumberOfTodosInLocalStorage(page, 3);
     });
@@ -332,7 +332,7 @@ test.describe("Clear completed button", () => {
     test("should display the correct text", async ({ page }) => {
         await page.locator(".todo-list li .toggle").first().check();
         await expect(
-            page.getByRole("button", { name: "Clear completed" })
+            page.getByRole("button", { name: "Clear completed" }),
         ).toBeVisible();
     });
 
@@ -350,7 +350,7 @@ test.describe("Clear completed button", () => {
         await page.locator(".todo-list li .toggle").first().check();
         await page.getByRole("button", { name: "Clear completed" }).click();
         await expect(
-            page.getByRole("button", { name: "Clear completed" })
+            page.getByRole("button", { name: "Clear completed" }),
         ).toBeHidden();
     });
 });
@@ -442,17 +442,17 @@ test.describe("Routing", () => {
 
     test("should highlight the currently applied filter", async ({ page }) => {
         await expect(page.getByRole("link", { name: "All" })).toHaveClass(
-            "selected"
+            "selected",
         );
         await page.getByRole("link", { name: "Active" }).click();
         // Page change - active items.
         await expect(page.getByRole("link", { name: "Active" })).toHaveClass(
-            "selected"
+            "selected",
         );
         await page.getByRole("link", { name: "Completed" }).click();
         // Page change - completed items.
         await expect(page.getByRole("link", { name: "Completed" })).toHaveClass(
-            "selected"
+            "selected",
         );
     });
 });
@@ -475,12 +475,12 @@ async function checkNumberOfTodosInLocalStorage(page: Page, expected: number) {
 
 async function checkNumberOfCompletedTodosInLocalStorage(
     page: Page,
-    expected: number
+    expected: number,
 ) {
     return await page.waitForFunction((e) => {
         return (
             JSON.parse(localStorage["react-todos"]).filter(
-                (todo: any) => todo.completed
+                (todo: any) => todo.completed,
             ).length === e
         );
     }, expected);

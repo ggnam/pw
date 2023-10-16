@@ -1,18 +1,29 @@
-export default {
+const config = {
+    timeout: 60000,
+    retries: 0,
     use: {
-        // headless 모드 설정
         headless: true,
-
-        // 어떤 브라우저를 사용할지 지정
-        browserName: "chromium",
-
-        // 뷰포트 사이즈 지정
         viewport: { width: 1280, height: 720 },
-
-        // 타임아웃 설정
-        // timeout: 5000,
-        slowMo: 5000,
+        actionTimeout: 15000,
+        ignoreHTTPSErrors: true,
+        video: "retain-on-failure",
+        screenshot: "only-on-failure",
     },
-    testDir: "./tests",
-    testIgnore: ["tests/test_runner.spec.ts", "tests/template.test.js"],
+    projects: [
+        {
+            name: "Chromium",
+            use: { browserName: "chromium" },
+        },
+        {
+            name: "Firefox",
+            use: { browserName: "firefox" },
+        },
+        {
+            name: "Webkit",
+            use: { browserName: "webkit" },
+        },
+    ],
+    testDir: "./tests/practice-1",
 };
+
+export default config;
