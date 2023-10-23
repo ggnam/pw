@@ -1,5 +1,8 @@
 # Assertion
 
+
+[comm](./commands.md)
+
 ## Assertion이란?
 
 !!! note Assertion
@@ -23,5 +26,3 @@ console.assert(1 === 2, "1은 2가 아닙니다.");
 5. 결과를 확인해주세요.
 6. `1 === 1`은 참이기 때문에 아무것도 출력되지 않습니다.
 7. `1 === 2`는 거짓이기 때문에 에러가 발생합니다.
-
-## Playwright에서는?

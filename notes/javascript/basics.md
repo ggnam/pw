@@ -1,18 +1,16 @@
-#!meta
-
-{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
-
-#!html
-
+## Markup
+```html
 <div id="section" style="border: 1px solid red; padding: 10px;">
   <h1 id="login-title">로그인 테스트</h1>
   <input id="id" type="text" name="id" placeholder="아이디">
   <input id="password" type="password" name="pw" placeholder="비밀번호">
   <button id="button">Login</button>
 </div>
+```
 
-#!javascript
-
+## Script
+```js 
 const button = document.getElementById('button');
 const id = document.getElementById('id');
 const pw = document.getElementById('password');
+```
