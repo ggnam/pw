@@ -4,7 +4,6 @@
 <input type="text" name="id" placeholder="아이디">
 ```
 
-
 ## Type Selectors
 ```css
 p {
