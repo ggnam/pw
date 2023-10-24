@@ -128,6 +128,18 @@ console.log(foo);
 | Cell 1   | Cell 2   | Cell 3   |
 | Cell 4   | Cell 5   | Cell 6   |
 
+## Emoji
+
+```markdown
+:smile:
+:joy:
+```
+
+> 위의 마크다운 코드는 아래와 같이 렌더링 됩니다.
+
+:smile:
+:joy:
+
 ## Horizontal Rule
 
 ```markdown
@@ -142,3 +154,4 @@ console.log(foo);
 
 -   [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 -   [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
+

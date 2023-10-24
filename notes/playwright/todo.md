@@ -1,6 +1,6 @@
-# 09/11 4주차
+# Will be categorized later
 
-!!! note Assertion
+!!! note 단언 (assertion)
 
     ==expect A to be B==
 
@@ -25,12 +25,12 @@
 
 ```js
 page.locator("h1");
+
 page.getByPlaceholder("Search");
 page.getByText("Search");
 page.getByRole("button", { name: "Search" });
 page.getByTestId("search-button");
 
-// Another way to get the same button
 page.getByLabelText("Search");
 page.getByDisplayValue("Search");
 page.getByAltText("Search");

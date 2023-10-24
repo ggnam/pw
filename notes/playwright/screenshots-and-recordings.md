@@ -1,4 +1,6 @@
-## Screenshot
+# 테스트 시 스크린샷과 녹화
+
+## 스크린샷
 
 ```js
 const { chromium } = require("playwright");
@@ -21,10 +23,11 @@ const { chromium } = require("playwright");
 })();
 ```
 
-## Recording
+## 동영상 녹화
 
 ```js
-const { chromium } = require("playwright"); // Or 'firefox' or 'webkit'.
+// Library 형태로 실행해봅시다.
+const { chromium } = require("playwright");
 
 (async () => {
     const browser = await chromium.launch();
