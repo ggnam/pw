@@ -3,6 +3,7 @@
 ## 스크린샷
 
 ```js
+// Library 형태로 실행해봅시다.
 const { chromium } = require("playwright");
 
 (async () => {
@@ -44,3 +45,6 @@ const { chromium } = require("playwright");
     await browser.close();
 })();
 ```
+
+## 옵션
+- [참고](./config.md#playwrightconfigjs)
