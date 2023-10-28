@@ -24,7 +24,7 @@
 ```markdown
 **나는 Bold 입니다.**
 
-_나는 Italic 입니다._
+*나는 Italic 입니다.*
 
 ~~나는 Strike Through 입니다.~~
 ```
@@ -33,16 +33,16 @@ _나는 Italic 입니다._
 
 **나는 Bold 입니다.**
 
-_나는 Italic 입니다._
+*나는 Italic 입니다.*
 
 ~~나는 Strike Through 입니다.~~
 
 ## List
 
 ```markdown
--   나는 unordered list 입니다.
--   나는 unordered list 입니다.
--   나는 unordered list 입니다.
+- 나는 unordered list 입니다.
+- 나는 unordered list 입니다.
+- 나는 unordered list 입니다.
 
 1. 나는 ordered list 입니다.
 2. 나는 ordered list 입니다.
@@ -62,12 +62,12 @@ _나는 Italic 입니다._
 ## Code
 
 ```markdown
-`나는 코드입니다.`
+나는 `코드입니다.`
 ```
 
 > 위의 마크다운 코드는 아래와 같이 렌더링 됩니다.
 
-`나는 코드입니다.`
+나는 `코드입니다.`
 
 ## Code Block
 
@@ -89,6 +89,7 @@ console.log(foo);
 
 ```markdown
 > 나는 Blockquote 입니다.
+html 태그 중 <blockquote> 태그와 비슷합니다. 
 ```
 
 > 나는 Blockquote 입니다.
@@ -100,7 +101,8 @@ console.log(foo);
 ```
 
 > 위의 마크다운 코드는 아래와 같이 렌더링 됩니다.
-> [나는 링크입니다.](https://www.google.com)
+
+[나는 링크입니다.](https://www.google.com)
 
 ## Image
 

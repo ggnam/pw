@@ -1,8 +1,5 @@
 # Assertion
 
-
-[comm](./commands.md)
-
 ## Assertion이란?
 
 !!! note Assertion

@@ -8,7 +8,7 @@
 ```js
 module.exports = {
   // 웹 사이트의 기본 URL을 설정합니다.
-  baseURL: 'https://mywebsite.com', 
+  baseURL: 'https://m.hanatour.com',
 
   use: {
     // 테스트를 실행할 브라우저를 설정합니다.
@@ -54,9 +54,9 @@ module.exports = {
     
     // 테스트 실행 중 동영상을 녹화할 수 있습니다.
     // 녹화된 동영상은 아래 명시된 `videos/` 폴더에 저장됩니다.
-    recordVideo: {
+    video: {
       dir: 'videos/',
-      size: { width: 1920, height: 1080 },
+      size: { width: 1280, height: 720 },
     },
     
     // 테스트 실행 중 스크린샷을 찍을 수 있습니다.
@@ -74,17 +74,10 @@ module.exports = {
   timeout: 60000,
 
   // 테스트를 병렬로 실행할지 설정합니다. 
-  // 기본값은 true입니다. 
-  // 여기서는 false로 설정하여 각 테스트가 순차적으로 실행되게 했습니다.
   workers: 1,
 
   // 실패한 테스트를 반복 실행하는 횟수를 설정합니다.
   // 0이면 반복 실행하지 않습니다. 기본값은 0입니다.
   retries: 2,
-
-  // 스크린샷을 자동으로 찍도록 설정합니다.
-  // 'only-on-failure' 설정은 테스트 실패시에만 스크린샷을 찍습니다.
-  // 'off', 'on', 'only-on-failure' 중 선택할 수 있습니다.
-  screenshot: 'only-on-failure',
 };
 ```

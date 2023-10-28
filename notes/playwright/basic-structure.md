@@ -17,7 +17,8 @@ test('테스트 이름이 들어갑니다.', async ({ page }) => {
 ```
 
 ## Library 형태로 실행
-
+!!! question "Library 형태로 실행하면 뭐가 좋나요?"
+    별다른 셋업 과정없이 패키지만 설치하면 `node playwright.js`와 같은 명령어로 테스트를 실행하고 결과를 확인할 수 있습니다.
 ```js
 const { chromium } = require('playwright');
 
@@ -38,8 +39,7 @@ const { chromium } = require('playwright');
   await browser.close();
 })();
 ```
-!!! question "Library 형태로 실행하면 뭐가 좋나요?"
-    별다른 셋업 과정없이 패키지만 설치하면 `node playwright.js`와 같은 명령어로 테스트를 실행하고 결과를 확인할 수 있습니다.
+
 
 ## 테스트를 그룹핑 해보자!
 
