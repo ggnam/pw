@@ -1,16 +1,15 @@
 # Playwright commands
 
 !!! warning 주의사항
-    `playwright` 명령어 앞에 `npx`를 붙여주세요. 특정 IDE에서는 `node_modules/.bin`을 자동으로 PATH에 넣어주지만, 터미널이나 VSCode에서는 그렇지 않습니다!
+`playwright` 명령어 앞에 `npx`를 붙여주세요. 특정 IDE에서는 `node_modules/.bin`을 자동으로 PATH에 넣어주지만, 터미널이나 VSCode에서는 그렇지 않습니다!
 
 !!! tip 터미널 help 도움말을 잘 활용하자.
-    `npx playwright help <command>`를 입력하여 Playwright 명령어에 대한 도움말을 확인할 수 있습니다.
-    
+`npx playwright help <command>`를 입력하여 Playwright 명령어에 대한 도움말을 확인할 수 있습니다.
+
     - `npx playwright help test`
     - `npx playwright help install`
     - `npx playwright help codegen`
     - `npx playwright help open`
-
 
 ## 모든 테스트 실행
 

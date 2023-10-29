@@ -47,4 +47,5 @@ const { chromium } = require("playwright");
 ```
 
 ## 옵션
-- [참고](./config.md#playwrightconfigjs)
+
+-   [참고](./config.md#playwrightconfigjs)

@@ -20,6 +20,6 @@
 ## Jetbrains[^1] 사용자
 
 !!! info
-    Jetbrains IDE에서는 `Aqua` 플러그인을 설치합니다. `Playwright`, `Cypress`, `Selenium` 등의 테스트 프레임워크를 지원합니다.
+Jetbrains IDE에서는 `Aqua` 플러그인을 설치합니다. `Playwright`, `Cypress`, `Selenium` 등의 테스트 프레임워크를 지원합니다.
 
 [^1]: Webstorm, IntelliJ, PyCharm, GoLand, Rider, CLion, RubyMine, AppCode, DataGrip, PHPStorm, Android Studio 등

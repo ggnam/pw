@@ -1,7 +1,7 @@
 # Markdown 문법
-    
+
 !!! tip
-    마크다운을 이용해서 배운 것을 정리해봅시다.
+마크다운을 이용해서 배운 것을 정리해봅시다.
 
 ## Heading
 
@@ -24,7 +24,7 @@
 ```markdown
 **나는 Bold 입니다.**
 
-*나는 Italic 입니다.*
+_나는 Italic 입니다._
 
 ~~나는 Strike Through 입니다.~~
 ```
@@ -33,16 +33,16 @@
 
 **나는 Bold 입니다.**
 
-*나는 Italic 입니다.*
+_나는 Italic 입니다._
 
 ~~나는 Strike Through 입니다.~~
 
 ## List
 
 ```markdown
-- 나는 unordered list 입니다.
-- 나는 unordered list 입니다.
-- 나는 unordered list 입니다.
+-   나는 unordered list 입니다.
+-   나는 unordered list 입니다.
+-   나는 unordered list 입니다.
 
 1. 나는 ordered list 입니다.
 2. 나는 ordered list 입니다.
@@ -89,7 +89,7 @@ console.log(foo);
 
 ```markdown
 > 나는 Blockquote 입니다.
-html 태그 중 <blockquote> 태그와 비슷합니다. 
+> html 태그 중 <blockquote> 태그와 비슷합니다.
 ```
 
 > 나는 Blockquote 입니다.
@@ -156,4 +156,3 @@ html 태그 중 <blockquote> 태그와 비슷합니다.
 
 -   [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 -   [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
-
