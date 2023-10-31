@@ -1,42 +1,54 @@
 # Playwright commands
 
 !!! warning 주의사항
-`playwright` 명령어 앞에 `npx`를 붙여주세요. 특정 IDE에서는 `node_modules/.bin`을 자동으로 PATH에 넣어주지만, 터미널이나 VSCode에서는 그렇지 않습니다!
+    `playwright` 명령어 앞에 `npx`를 붙여주세요. 특정 IDE에서는 `node_modules/.bin`을 자동으로 PATH에 넣어주지만, 터미널이나 VSCode에서는 그렇지 않습니다!
 
 !!! tip 터미널 help 도움말을 잘 활용하자.
-`npx playwright help <command>`를 입력하여 Playwright 명령어에 대한 도움말을 확인할 수 있습니다.
-
+    `npx playwright help <command>`를 입력하여 Playwright 명령어에 대한 도움말을 확인할 수 있습니다.
     - `npx playwright help test`
     - `npx playwright help install`
     - `npx playwright help codegen`
     - `npx playwright help open`
 
-## 모든 테스트 실행
+## 테스트 실행
+
+### 모든 테스트 실행
 
 ```shell
 # npm run test
 npx playwright test
 ```
 
-## 특정 테스트만 실행
+### 특정 테스트 파일만 실행
 
 ```shell
 # npm run test:example
 npx playwright test tests/example.test.ts
 ```
 
-## 디버그 모드로 실행
+### 디버그 모드로 실행
 
 ```shell
 # npm run test:debug
 npx playwright test --debug
 ```
 
-## Interactive UI 모드로 실행
+### Interactive UI 모드로 실행
 
 ```shell
 # npm run test:ui
 npx playwright test --ui
+```
+
+### Config 지정
+```shell
+npx playwright test --config=playwright.config.js --project=webkit
+```
+
+### 병렬 실행
+```shell
+# worker를 10개로 지정하여 10번의 테스트를 실행합니다.
+npx playwright test --repeat-each 10 --workers 10
 ```
 
 ---
