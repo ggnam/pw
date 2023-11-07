@@ -10,6 +10,7 @@
         "test:chromium": "playwright cr https://example.org",
         "test:firefox": "playwright ff https://example.org",
         "test:webkit": "playwright wk https://example.org",
+        "test:ui": "playwright test --config=api.config.js",
         "generate": "playwright codegen https://example.com",
         "generate:hnt": "playwright codegen https://m.hanatour.com",
         "start": "node src/login.js",
