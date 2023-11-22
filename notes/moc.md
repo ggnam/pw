@@ -19,7 +19,7 @@
 
 ## Playwright 심화
 
--   ... 작성 중
+-   [Plawright debugging](./playwright/debugging.md)
 
 ## Playwright 명령어
 
