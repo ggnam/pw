@@ -9,6 +9,21 @@ test.use({
 });
 
 test.only("로그인 실패 @login", async ({ page }) => {
+    page.on("console", (msg) => {
+        console.log(msg);
+    });
+
+    page.on("requestfinished", (request) => {
+        request.response().then((response) => {
+            // Only log 300 and 400
+            if (response.status() >= 300 && response.status() < 500) {
+                console.log(response.status());
+                console.log(response.headers());
+                console.log(response.request().url());
+            }
+        });
+    });
+
     await page.goto("https://m.hanatour.com/dcr/");
 
     // 광고 팝업 닫기
@@ -18,6 +33,7 @@ test.only("로그인 실패 @login", async ({ page }) => {
     await page.getByText("마이페이지").click();
 
     await page.locator("body").press("Tab");
+
     await page.getByPlaceholder("hana@hanatour.com").fill("ggnam@hanatour.com");
     await page.getByPlaceholder("hana@hanatour.com").press("Tab");
     await page.getByPlaceholder(" ").fill("Wrong password");
