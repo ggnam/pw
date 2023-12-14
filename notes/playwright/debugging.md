@@ -3,6 +3,8 @@
 ## `--debug` flag
 ```shell
 npx playwright test --debug
+
+# Useful tools for debugging
 npx playwright test --ui
 npx playwright codegen <url>
 ```

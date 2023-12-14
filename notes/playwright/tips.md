@@ -3,7 +3,7 @@
 ## Alias 등록 (`npx playwright` -> `pw`)
 
 !!! tip
-매번 명령어 실행시 `npx playwright`를 입력하는 것은 귀찮은 일입니다. 이를 간편하게 `pw`로 줄여서 사용해봅시다.
+    매번 명령어 실행시 `npx playwright`를 입력하는 것은 귀찮은 일입니다. 이를 간편하게 `pw`로 줄여서 사용해봅시다.
 
 ### Zsh 사용자
 

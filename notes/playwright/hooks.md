@@ -1,6 +1,10 @@
 # Playwright hooks
 
-!!! note - `test.beforeAll()` - `test.beforeEach()` - `test.afterEach()` - `test.afterAll()`
+!!! note 
+    - `test.beforeAll()` 
+    - `test.beforeEach()`
+    - `test.afterEach()`
+    - `test.afterAll()`
 
 ```javascript
 const { test } = require("@playwright/test");
