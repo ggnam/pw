@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "name": "key",
+      "value": "value",
+      "domain": "localhost",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "http://localhost:8080",
+      "localStorage": [
+        {
+          "name": "key",
+          "value": "value"
+        }
+      ]
+    }
+  ]
+}

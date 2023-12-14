@@ -1,7 +1,13 @@
 # Playwright Debugging
 
+## `--debug` flag
 ```shell
-playwright test --debug
-playwright test --ui
-playwright codegen <url>
+npx playwright test --debug
+npx playwright test --ui
+npx playwright codegen <url>
+```
+
+## Envrionment variable
+```shell
+PWDEBUG=1 npx playwright test
 ```
